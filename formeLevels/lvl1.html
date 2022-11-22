@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lvl1.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="lvl1.js"></script>
+    <script src="../main.js"></script>
+    <title>Document</title>
+   
+</head>
+<body>
+    <div id="urmatorul">
+        <button id="btnNext" onclick="next()"> 
+          Urmatorul
+        </button>    
+    </div>
+    <div id="patrat">
+        <button class="btnLVL1" id = "gresit" onclick = validareRaspuns(event)>Triunghi</button>
+        <button class="btnLVL1" id="corect" onclick = validareRaspuns(event)>Patrat</button>
+        <button class="btnLVL1" id = "gresit" onclick = validareRaspuns(event)>Cerc</button>
+        <button class="btnLVL1" id = "gresit" onclick = validareRaspuns(event)>Trapez</button>
+    </div>
+</body>
+</html>
