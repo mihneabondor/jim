@@ -24,41 +24,45 @@
 }
 
 
-.btnLVL1{
-    background-color: var(--background);
-    width:20%;
-    height:18%;
-    font-family: andika;
-    font-weight: bold;
-    font-size:40px;
-    margin:1.5%;
-    letter-spacing:1.2px;
-
-}
-
-.btnLVL1:hover{
-    background: gray;
-}
-
 body{
     background-color: var(--blue);
 }
 
-#urmatorul {
-    position:relative;
-    text-align:center;
-    margin-top:35%;
-}
-#btnNext{
-    cursor: pointer;
-    visibility: hidden;
-    background-color: var(--background);
-    width:15%;
-    height:8%;
-    font-family: andika;
-    font-weight: bold;
-    font-size:25px;
-    margin:1.5%;
-    letter-spacing:1.2px;
 
+.one{
+    width: 0;
+    height: 0;
+    border-bottom: 22.8vh solid grey;
+    border-right: 22.8vh  solid transparent;
+    z-index: 1;
+    cursor: pointer;
+}
+.two{
+    width: 0;
+    height: 0;
+    border-top: 22.8vh solid gray;
+    border-left: 22.8vh solid transparent;
+
+    z-index: 1;
+    cursor: pointer;
+}
+
+.target {
+    width: 22.8vh;
+    height: 22.8vh;
+    background: #DFBE99;
+    top: 30%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    position: fixed;
+}
+.tri{
+    display: flex;
+    justify-content: center;
+    padding-top: 65vh;
+}
+#canvas {
+    z-index: 0;
 }
