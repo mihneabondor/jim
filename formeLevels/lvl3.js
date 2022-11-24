@@ -127,24 +127,44 @@ class DraggableTriangle {
   released() {
     this.dragging = false;
   }
+
+  snap() {
+    if(Math.abs(this.y2 - windowHeight/9) < 5) {
+      this.dragging = false;
+      fill(50);
+      this.y2 = windowHeight/9;
+      this.x3 = windowWidth/5.75+windowWidth/6;
+    }
+  }
 }
 
 let shape1;
+let shape2;
+let shape3;
 
 function setup() {
   var canvas=createCanvas(windowWidth/2, windowHeight/1.2);
-    canvas.position(windowWidth/4,windowHeight/10);
-  shape1 = new DraggableTriangle(30, 75, 58, 20, 86, 75);
+  canvas.position(windowWidth/4,windowHeight/10);
+  shape1 = new DraggableTriangle(50, 650, 50, 435, 320, 650);
 }
 
 function draw() {
   background('#d3d3d3');
   line (-1000,400,1000,400);
 
+  setLineDash([10]);
+  fill(175, 200);
+  rect(windowWidth/6, windowHeight/9, windowWidth/5.75, windowHeight/4);
+
+  setLineDash([1]);
   shape1.over();
   shape1.update();
   shape1.show();
+  shape1.snap();
+}
 
+function setLineDash(list) {
+  drawingContext.setLineDash(list);
 }
 
 function mousePressed() {
