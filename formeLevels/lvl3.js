@@ -138,6 +138,8 @@ class DraggableTriangle {
   }
 }
 
+
+
 let shape1;
 let shape2;
 let shape3;
@@ -154,7 +156,9 @@ function draw() {
 
   setLineDash([10]);
   fill(175, 200);
-  rect(windowWidth/6, windowHeight/9, windowWidth/5.75, windowHeight/4);
+  
+  let rectangle = rect(windowWidth/6, windowHeight/9, windowWidth/5.75, windowHeight/4);
+  rectangle.parent('draggable');
 
   setLineDash([1]);
   shape1.over();
