@@ -10,9 +10,33 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <Title> Reconstruieste forma </Title>
+    <script>
+        $( function() {
+        $( "#draggable1" ).draggable(
+            {
+                snap:".target",
+            }
+        );
+        } );
+    </script>
+    <script>
+        $( function() {
+        $( "#draggable2" ).draggable(
+            {
+                snap:".target",
+            }
+        );
+        } );
+    </script>
+
 </head>
 <body>
-   
-        
+    <div class="target" id = "ceva"></div>
+
+    <div class = "canvas"></div>
+    <div class="tri">
+        <div id="draggable1" class="one"> </div>
+        <div id="draggable2" class="two"></div>
+    </div>
 </body>
 </html>
