@@ -11,48 +11,32 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <Title> Reconstruieste forma </Title>
     <script>
-        var snappedElementsCount = 0;
-        $( function(id) {
-        $( ".draggable" ).draggable(
+        $( function() {
+        $( "#draggable1" ).draggable(
             {
                 snap:".target",
-                stop: function(event, ui) {
-                var snapped = $(this).data('ui-draggable').snapElements;
-                var snappedTo = $.map(snapped, function(element) {
-                return element.snapping ? element.item : null;
-                });
-                if(snappedTo.length != 0) {
-                    snappedElementsCount += 1;
-                } else {
-                    snappedElementsCount -= 1;
-                }
-                console.log(snappedElementsCount);
-                const urmatorulButton = document.getElementById("btnNext");
-                if(snappedElementsCount == 2) {
-                    urmatorulButton.style.visibility = "visible";
-                } else {
-                    urmatorulButton.style.visibility = "hidden";
-                }
-                }
             }
         );
         } );
     </script>
+    <script>
+        $( function() {
+        $( "#draggable2" ).draggable(
+            {
+                snap:".target",
+            }
+        );
+        } );
+    </script>
+
 </head>
 <body>
     <div class="target" id = "ceva"></div>
 
     <div class = "canvas"></div>
     <div class="tri">
-        <div id="one" class="draggable"> </div>
-        <div id="two" class="draggable"></div>
+        <div id="draggable1" class="one"> </div>
+        <div id="draggable2" class="two"></div>
     </div>
-
-    <div id="urmatorul">
-        <button id="btnNext" onclick="next()"> 
-          Urmatorul
-        </button>    
-    </div>
-
 </body>
 </html>

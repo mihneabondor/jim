@@ -29,7 +29,7 @@ body{
 }
 
 
-#one{
+.one{
     width: 0;
     height: 0;
     border-bottom: 22.8vh solid grey;
@@ -37,7 +37,7 @@ body{
     z-index: 1;
     cursor: pointer;
 }
-#two{
+.two{
     width: 0;
     height: 0;
     border-top: 22.8vh solid gray;
@@ -58,25 +58,11 @@ body{
     z-index: 1;
     position: fixed;
 }
-
 .tri{
     display: flex;
     justify-content: center;
     padding-top: 65vh;
 }
-
 #canvas {
     z-index: 0;
-}
-
-#btnNext{
-    cursor: pointer;
-    visibility: hidden;
-    background-color: var(--background);
-    width:15%;
-    height:8%;
-    font-family: andika;
-    font-weight: bold;
-    font-size:25px;
-    letter-spacing:1.2px;
 }
