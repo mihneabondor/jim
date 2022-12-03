@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lvl4.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="lvl4.js"></script>
+    <script src="../main.js"></script>
+    <title>Document</title>
+   
+</head>
+<body>
+   
+   <p id="intrebare">
+    Cate laturi are aceasta <i>STEA</i>?
+   </p>
+
+   <form id="txtBox" onsubmit="validareRaspuns()">
+
+    <label for="laturi">Numar de laturi: </label>
+    <input type="number" id="lat" min="3" max="10000">
+    <input type="submit" id="veri" value="Verificare">
+
+   </form>
+   
+   
+   <div id="urmatorul">
+    <button id="btnNext" onclick="next()"> 
+      Urmatorul
+    </button>    
+</div>
+</body>
+</html>

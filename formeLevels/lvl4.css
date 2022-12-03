@@ -1,0 +1,73 @@
+:root{
+    --blue: #729EA1;
+    --sage: #B5BD89;
+    --olivine: #95B67F;
+    --tan: #DFBE99;
+    --lightCoral: #EC9192;
+    --blush: #DB5375;
+    --background: #D3D3D3;
+}
+
+@font-face {
+    font-family: andika;
+    src: url("../Andika/Andika-Regular.ttf");
+}
+
+@font-face {
+    font-family: andikaBold;
+    src: url("../Andika/Andika-Bold.ttf");
+}
+body{
+    background-color: var(--blue);
+}
+#intrebare{
+    padding-top: 85px;
+    font-family: andika;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    z-index: 1;
+    letter-spacing: 1.2px;
+}
+#txtBox{
+    padding-top: 400px;
+    font-family: andika;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    z-index: 1;
+    letter-spacing: 1.2px;
+}
+#lat{
+    font-family: andika;
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+    z-index: 1;
+    letter-spacing: 1.2px;
+    height: 50px;
+    width: 100px;
+}
+
+#veri{
+    font-family: andika;
+    font-weight: bold;
+    text-align: center;
+    font-size: 31px;
+    z-index: 1;
+    letter-spacing: 1.2px;
+   
+}
+#btnNext{
+    cursor: pointer;
+    visibility: hidden;
+    background-color: var(--background);
+    width:15%;
+    height:8%;
+    font-family: andika;
+    font-weight: bold;
+    font-size:25px;
+    margin:1.5%;
+    letter-spacing:1.2px;
+
+}
