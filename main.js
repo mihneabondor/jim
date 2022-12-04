@@ -17,14 +17,21 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
-const levels = [ "lvl1", "lvl2", "lvl3","lvl4"];
-function openPage() {   
-    const shuffledLevels = randomize(levels);
+const levelsForme = [ "lvl1", "lvl2", "lvl3","lvl4"];
+function openPageForme() {   
+    const shuffledLevels = randomize(levelsForme);
     localStorage.setItem('formeLevels', JSON.stringify(shuffledLevels));
     var page = "/formeLevels/"+shuffledLevels[0]+".html";
     window.open(page,"_self");
 }
 
+const levelsNum=["lvl1"];
+function openPageNum(){
+    const shuffledLevels = randomize(levelsNum);
+    localStorage.setItem('numereLevels', JSON.stringify(shuffledLevels));
+    var page = "/numereLevels/"+shuffledLevels[0]+".html";
+    window.open(page,"_self");
+}
 function next(){
     const shuffledLevels = JSON.parse(localStorage.getItem('formeLevels'));
     shuffledLevels.shift();
