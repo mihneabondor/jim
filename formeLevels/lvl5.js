@@ -1,19 +1,17 @@
 
 function setup() {
-    var canvas = createCanvas(windowWidth/2,windowHeight/2);
+    var canvas = createCanvas(windowWidth/2,windowHeight/2,WEBGL);
     canvas.position(windowWidth/4, windowHeight/10);
-    background('#d3d3d3');
 }
 
 function draw()
 {
-    translate(windowWidth/4, windowHeight/4);
-    triangle(0  , -100, 75, 30, -75, 30);
-    point(0, -100);
-    point(50, 30);
-    point(-50, 30);
+    background("#d3d3d3");
+    rotateX(frameCount * 0.01);
+    rotateY(frameCount * 0.01);
+    box(100);
     fill('#DB5375');
-} 
+}
 
 function validareRaspuns(event)
 {

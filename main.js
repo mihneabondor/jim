@@ -17,7 +17,7 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
-const levels = [ "lvl3"];
+const levels = [ "lvl1", "lvl2", "lvl3","lvl4"];
 function openPage() {   
     const shuffledLevels = randomize(levels);
     localStorage.setItem('formeLevels', JSON.stringify(shuffledLevels));

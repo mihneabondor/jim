@@ -10,7 +10,7 @@ function draw()
     translate(windowWidth/4, windowHeight/4);
     rectMode(CENTER);
     rect(0, 0, 100, 100);
-    fill('#3C4048');
+    fill('#DB5375');
 }
 
 function validareRaspuns(event)

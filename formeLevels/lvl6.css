@@ -77,47 +77,24 @@ body{
     letter-spacing:1.2px;
 
 }
-
-
-.star {
-	position: relative;
-	display: block;
-	color: var(--blush);
-	width: 0;
-	height: 0;
-	border-right: 100px solid transparent;
-	border-bottom: 70px solid var(--blush);
-	border-left: 100px solid transparent;
-    transform: translate(-50%,-50%);
-	transform: rotate(35deg);
+.hex{
+    width: 150px;
+    border-left:80px solid transparent;
+    border-right: 80px solid transparent;
+    border-top:150px solid var(--blush);
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -60%);
 }
-
-.star:after {
-	border-bottom: 80px solid var(--blush);
-	border-left: 30px solid transparent;
-	border-right: 30px solid transparent;
-	position: absolute;
-	content: '';
-	width: 0;
-	height: 0;
-	top: -45px;
-	left: -65px;
-	display: block;
-    transform: translate(-50%,-50%);
-	transform: rotate(-35deg);
-}
-
-.star:before {
-	border-right: 100px solid transparent;
-	border-bottom: 70px solid var(--blush);
-	border-left: 100px solid transparent;
-	position: absolute;
-	content: '';
-	display: block;
-	top: 3px;
-	left: -105px;
-	width: 0;
-	height: 0;
-    transform: translate(-50%,-50%);
-	transform: rotate(-70deg);
+.hex:after{
+    content:"";
+    width: 150px;
+    border-left:80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom:150px solid var(--blush);
+    position: absolute;
+    left:50%;
+    top:-224.4px;
+    transform: translate(-50%, -50%);
 }
