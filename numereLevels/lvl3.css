@@ -40,7 +40,7 @@ body{
     letter-spacing:1.2px;
 }
 #symb{
-    position:absolute;
+    position: absolute;
     top: 40%;
     left: 35%;
     margin-right: -50%;
@@ -68,7 +68,7 @@ body{
     text-align: center; 
 }
 
-.btnLVL1{
+.btnLVL3{
     background-color: var(--background);
     width:20%;
     height:18%;

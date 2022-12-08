@@ -40,7 +40,7 @@ body{
     letter-spacing:1.2px;
 }
 #symb{
-    position:absolute;
+    position: absolute;
     top: 40%;
     left: 35%;
     margin-right: -50%;
@@ -54,8 +54,8 @@ body{
     visibility: hidden;
     position: absolute;
     top: 40%;
-    left: 65%;
-    margin-right: -50%;
+    left: 78%;
+    margin-right: -40%;
     transform: translate(-10%, -140%);
     text-align: center;
     font-family: andika;
@@ -68,7 +68,7 @@ body{
     text-align: center; 
 }
 
-.btnLVL1{
+.btnLVL2{
     background-color: var(--background);
     width:20%;
     height:18%;
@@ -80,7 +80,7 @@ body{
 
 }
 
-.btnLVL1:hover{
+.btnLVL2:hover{
     background: gray;
 }
 

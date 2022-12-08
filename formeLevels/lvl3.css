@@ -47,22 +47,31 @@ body{
     cursor: pointer;
 }
 
-.target {
+.patrat {
     width: 22.8vh;
     height: 22.8vh;
-    background: #DFBE99;
-    top: 30%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    background: var(--blush);
     z-index: 1;
-    position: fixed;
 }
+
+#patrat-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+#linie-orizontala {
+    width: max-content; 
+    height: 5px;
+    z-index: 100;
+}
+
 .tri{
     display: flex;
     justify-content: center;
-    padding-top: 65vh;
+    margin-top: 23vh;
 }
+
 #canvas {
     z-index: 0;
 }
@@ -77,5 +86,5 @@ body{
     font-weight: bold;
     font-size:25px;
     letter-spacing:1.2px;
-    margin-left: 40px;
+    margin-left: 80vw;
 }

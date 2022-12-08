@@ -8,10 +8,23 @@
     <script src="jquery-3.6.0.min.js"></script>
     <script src="lvl2.js"></script>
     <script src="../main.js"></script>
-    <title>Document</title>
+    <title>Forma corecta</title>
    
+    <link rel="stylesheet" href="..\calculator.css">
+    <script src="../calculator.js"></script>
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script> 
+        $(function(){
+          $("#calculator").load("../calculator.html");
+        });
+        </script>
+
 </head>
 <body>
+    <div id="calculator"></div>
     <div id="urmatorul">
         <button id="btnNext" onclick="next()"> 
           Urmatorul

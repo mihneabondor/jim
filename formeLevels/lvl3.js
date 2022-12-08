@@ -11,7 +11,6 @@ function draw() {
 
   setLineDash([10]);
   fill(175, 200);
-  // let rectangle = rect(windowWidth/6, windowHeight/9, windowWidth/5.75, windowHeight/4);
 }
 
 function setLineDash(list) {
