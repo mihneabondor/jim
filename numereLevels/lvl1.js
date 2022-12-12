@@ -1,7 +1,3 @@
-
-
-
-
 function validareRaspuns(event)
 {
     if(event.target.id === "corect") {

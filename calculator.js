@@ -66,11 +66,15 @@ calculator.onkeyup = function (event) {
         solve();
     }
 }
-
+//fain👍
 function solve() {
     let x = document.getElementById("result").value
+    if (x.includes("/0")) {
+      document.getElementById("result").value = "nedefinit"
+    } else {
     let y = math.evaluate(x)
     document.getElementById("result").value = y
+    }
 }
 
 function clr() {

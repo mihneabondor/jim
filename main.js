@@ -31,7 +31,8 @@ function openPageNum(){
     localStorage.setItem('numereLevels', JSON.stringify(shuffledLevels));
     var page = "/numereLevels/"+shuffledLevels[0]+".html";
     window.open(page,"_self");
-}
+} 
+
 
 function next(){
     const shuffledLevels = JSON.parse(localStorage.getItem('formeLevels'));
@@ -71,3 +72,43 @@ function randomize(array) {
     return array;
   }
 
+  function getRandomArbitrary(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+  }
+
+//fain👍    
+function generateEquation() {
+    let numberCount = getRandomArbitrary(3, 6), numere = [], indexSemne = [], semne = ["+", "-", "*"];
+    for(let i = 1; i <= numberCount; i++) {
+        let randSemne = getRandomArbitrary(0,3), randNumere = getRandomArbitrary(1,10);
+        numere.push(randNumere);
+        indexSemne.push(semne[randSemne]);
+    }
+
+    let equation = "";
+    for(let i = 0; i < numberCount; i++) {
+        equation += numere[i] + " " + indexSemne[i] + " ";
+    }
+
+    equation = equation.substring(0, equation.length-2);
+    return equation;
+}
+
+
+function generateAnswers() {
+    let equation = generateEquation(), answers = [];
+    let correctAnswer = math.evaluate(equation);
+    answers.push(correctAnswer);
+    answers.push(getRandomArbitrary(correctAnswer/2, correctAnswer-1));
+    answers.push(getRandomArbitrary(correctAnswer+1, correctAnswer*2));
+    answers.push(getRandomArbitrary(correctAnswer+1, correctAnswer*2));
+
+    answers=randomize(answers);
+    console.log(equation)
+    
+    answers.forEach(element => {
+        console.log(element)
+    });
+
+    return answers
+}

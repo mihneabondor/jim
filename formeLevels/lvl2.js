@@ -18,11 +18,23 @@ function draw()
 function validareRaspuns(event)
 {
     if(event.target.id === "corect") {
-        event.target.style.background = 'green';
         const urmatorulButton = document.getElementById("btnNext");
         urmatorulButton.style.visibility = "visible";
-    } else {
-        event.target.style.background = 'red';
+        const bifa = document.getElementById("checkmark3");
+        bifa.style.visibility = "visible";
+        event.target.style.color = "green";
+    } else if(event.target.id === "gresit1"){
+        const bifa = document.getElementById("checkmark1");
+        bifa.style.visibility = "visible";
+        event.target.style.color = "red";
+    } else if(event.target.id === "gresit2"){
+        const bifa = document.getElementById("checkmark2");
+        bifa.style.visibility = "visible";
+        event.target.style.color = "red";
+    } else if(event.target.id === "gresit3"){
+        const bifa = document.getElementById("checkmark4");
+        bifa.style.visibility = "visible";
+        event.target.style.color = "red";
     }
 }
 
