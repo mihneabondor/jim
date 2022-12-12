@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="numere.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script src="../main.js"></script>
+    <script src="numere.js"></script>
+    <title>Calculeaza</title>
+    <link rel="stylesheet" href="..\calculator.css">
+    <script src="../calculator.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script> 
+        $(function(){
+          $("#calculator").load("../calculator.html");
+        });
+        </script>
+   <script src="numere.js"></script>
+
+
+   <script src=
+   "https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+           integrity=
+   "sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+           crossorigin="anonymous" 
+           referrerpolicy="no-referrer"></script>
+       <script src=
+   "https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
+           integrity=
+   "sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
+           crossorigin="anonymous" 
+           referrerpolicy="no-referrer"></script>
+</head>
+<body onload = "setButtons()">
+    <h1 id="cerinta"> Calculeaza </h1>
+    <div id="calculator"></div>
+    <div id="urmatorul">
+        <button id="btnNext" onclick="window.location.reload()">
+          Urmatorul
+        </button>    
+    </div>
+    
+    <p id="symb"></p>
+    <p id="symb2"> 11</p>
+    <div id="patrat">
+        <button class="btnLVL1" id = "gresit" onclick = validareRaspuns(event)>4</button>
+        <button class="btnLVL1" id="corect" onclick = validareRaspuns(event)>11</button>
+        <button class="btnLVL1" id = "gresit" onclick = validareRaspuns(event)>18</button>
+        <button class="btnLVL1" id = "gresit" onclick = validareRaspuns(event)>0</button>
+    </div>
+</body>
