@@ -1,4 +1,4 @@
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,21 +37,19 @@
            crossorigin="anonymous" 
            referrerpolicy="no-referrer"></script>
 </head>
-<body onload = "setButtons()">
+<body onload = "prepareScreen()">
     <h1 id="cerinta"> Calculeaza </h1>
     <div id="calculator"></div>
     <div id="urmatorul">
-        <button id="btnNext" onclick="window.location.reload()">
-          Urmatorul
-        </button>    
+        <button id="btnNext" onclick="window.location.reload()"> Urmatorul</button>
     </div>
     
-    <p id="symb"></p>
-    <p id="symb2"> 11</p>
+    <h1 id="equation"></h1>
     <div id="patrat">
-        <button class="btnLVL1" id = "gresit" onclick = validareRaspuns(event)>4</button>
-        <button class="btnLVL1" id="corect" onclick = validareRaspuns(event)>11</button>
-        <button class="btnLVL1" id = "gresit" onclick = validareRaspuns(event)>18</button>
-        <button class="btnLVL1" id = "gresit" onclick = validareRaspuns(event)>0</button>
+        <button class="btnLVL1" id = "variant0" onclick = validareRaspuns(event)>4</button>
+        <button class="btnLVL1" id=  "variant1" onclick = validareRaspuns(event)>11</button>
+        <button class="btnLVL1" id = "variant2" onclick = validareRaspuns(event)>18</button>
+        <button class="btnLVL1" id = "variant3" onclick = validareRaspuns(event)>0</button>
     </div>
 </body>
+</html>

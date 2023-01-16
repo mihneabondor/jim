@@ -38,6 +38,7 @@ body{
     font-size:25px;
     margin:1.5%;
     letter-spacing:1.2px;
+    z-index: 1;
 }
 #symb{
     position:absolute;
@@ -50,22 +51,12 @@ body{
     font-weight:bold;
     font-size:150px;
 }
-#symb2{
-    visibility: hidden;
-    position: absolute;
-    top: 40%;
-    left: 65%;
-    margin-right: -50%;
-    transform: translate(-10%, -140%);
-    text-align: center;
-    font-family: andika;
-    font-weight:bold;
-    font-size:150px;
-}
+
 #patrat{
-    margin-top:0%;
+      margin-top:25%;
     position:relative;
     text-align: center; 
+    z-index:0;
 }
 
 .btnLVL1{
@@ -75,8 +66,9 @@ body{
     font-family: andika;
     font-weight: bold;
     font-size:40px;
-    margin:1.5%;
+    margin-top:0%;
     letter-spacing:1.2px;
+    border-radius:28px;
 
 }
 
@@ -88,5 +80,13 @@ body{
     position:relative;
     text-align: center;
     font-size:50px;
-    margin-right:8%;
 }
+#equation{
+    position:relative;
+    text-align: center;
+    font-family: andika;
+    font-weight: bold;
+    font-size:50px;
+    margin-top:-30%;
+}
+

@@ -1,11 +1,11 @@
+const { index } = require("mathjs");
+
 function validareRaspuns(event)
 {
     if(event.target.id === "corect") {
         event.target.style.background = 'green';
         const urmatorulButton = document.getElementById("btnNext");
         urmatorulButton.style.visibility = "visible";
-        const raspButton=document.getElementById("symb2");
-        raspButton.style.visibility="visible";
     } else {
         event.target.style.background = 'red';
     }
@@ -52,14 +52,18 @@ function generateAnswers(equation) {
     answers.push(getRandomArbitrary(correctAnswer/2, correctAnswer-1));
     answers.push(getRandomArbitrary(correctAnswer+1, correctAnswer*2));
     answers.push(getRandomArbitrary(correctAnswer+1, correctAnswer*2));
-
     answers=randomize(answers);
-
+    if(answers[0]===answers[1])
+        answers[1]+=1;
+     if(answers[0]===answers[2]) 
+        answers[2]+=8;
+     if(answers[0]===answers[3]) 
+         answers[3]+=5;
     return answers
 }
 
 function setEquation(equation) {
-    document.getElementById("symb").innerHTML = equation
+    document.getElementById("equation").innerHTML = equation
 }
 
 function setButtons(){
@@ -76,4 +80,19 @@ function setButtons(){
     }
 
     return buttons;
+}
+
+function prepareScreen() {
+    let equation = generateEquation()
+    setEquation(equation)
+    let answers = generateAnswers(equation)
+
+    for(let i = 0; i <= 3; i++) {
+        let answer = answers[i]
+        document.getElementById("variant"+i).innerHTML = answer
+        if(math.evaluate(equation) == answer)
+            document.getElementById("variant"+i).id = "corect"
+        else
+            document.getElementById("variant"+i).id = "gresit"
+    }
 }

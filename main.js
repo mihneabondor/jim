@@ -26,10 +26,11 @@ function openPageForme() {
 }
 
 const levelsNum=["lvl1","lvl2","lvl3","lvl4","lvl5"];
+
 function openPageNum(){
     const shuffledLevels = randomize(levelsNum);
     localStorage.setItem('numereLevels', JSON.stringify(shuffledLevels));
-    var page = "/numereLevels/"+shuffledLevels[0]+".html";
+    var page = "/numere.html";
     window.open(page,"_self");
 } 
 
