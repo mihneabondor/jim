@@ -21,7 +21,7 @@ const levelsForme = [ "lvl1", "lvl2", "lvl3","lvl4","lvl5","lvl6"];
 function openPageForme() {   
     const shuffledLevels = randomize(levelsForme);
     localStorage.setItem('formeLevels', JSON.stringify(shuffledLevels));
-    var page = "/formeLevels/"+shuffledLevels[0]+".html";
+    var page = "formeLevels/"+shuffledLevels[0]+".html";
     window.open(page,"_self");
 }
 
@@ -40,7 +40,7 @@ function next(){
     shuffledLevels.shift();
     localStorage.clear('formeLevels');
     localStorage.setItem('formeLevels', JSON.stringify(shuffledLevels));
-    var page = "/formeLevels/"+shuffledLevels[0]+".html";
+    var page = "formeLevels/"+shuffledLevels[0]+".html";
     if(shuffledLevels.length != 0) {
         window.open(page, '_self');
     } else {
