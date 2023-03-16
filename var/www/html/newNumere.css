@@ -1,0 +1,71 @@
+body {
+    background-color: rgb(254, 199, 74);
+}
+
+#page-container {
+    height: 95vh;
+}
+
+#equation-container {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    height: 35vh;
+    width: 50vw;
+    background-color: white;
+    transform: translate(15vw, 10vh);
+    box-shadow: 5px 10px;
+    border-radius: 5%;
+}
+
+#equation {
+    padding-left: 10vw;
+    font-size: 45px;
+}
+
+#grid-container {
+    height: 40vh;
+    transform: translate(-7vw, 15vh);
+
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+    column-gap: 5vw;
+    row-gap: 5vh;
+    justify-content: center;
+    align-content: center;
+}
+
+#grid-item {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    border-radius: 10%;
+    box-shadow: 5px 5px;
+    width: 30vw;
+    height: 15vh;
+    text-align: center;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+#grid-item:hover {
+    transform: scale(0.95);
+}
+
+#equation-step1 {
+    padding-left: 10vw;
+    font-size: 35px;
+}
+
+#jim-picture {
+    padding-left: 10vw;
+    height: 20vh;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.wrapper-item:first-child {
+    grid-column: 1/3;
+}
