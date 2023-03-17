@@ -29,23 +29,37 @@
 "sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
         crossorigin="anonymous" 
         referrerpolicy="no-referrer"></script>
+    <script src="numere.js"></script>
     <title>Numere</title>
 </head>
-<body>
+<body onload = "prepareScreen()">
     <div id="calculator"></div>
     <div id = "page-container">
-        <div id = "equation-container">
-            <div id = "wrapper">
-            <h1 class = "wrapper-item" id = "equation"> 3*5+7 = ? </h1>
-            <p class = "wrapper-item" id = "equation-step1"> 15+7 = ? </p>
-            <img class = "wrapper-item" src = "Resources/jim_dance.png" id = "jim-picture">
-         </div>
+        <div id = "equation-container-grid">
+            <div id = "equation-container">
+                <!-- <p id = 'help-button' onclick = 'console.log("dsfdsds")'> Ajutor</p> -->
+                <div id = "wrapper">
+                <h1 class = "wrapper-item" id = "equation"> 3*5+7 = ? </h1>
+                <p class = "wrapper-item" id = "equation-step1"> 15+7 = ? </p>
+                <img class = "wrapper-item" src = "Resources/jim_dance.png" id = "jim-picture">
+            </div>
+        </div>
+        <div id = "stats-container">
+            <div id = 'stats-header'><h3> Streaks </h3></div>
+            <p class = 'stats-text' id = 'stats-corecte-text'> Corecte: 0 </p>
+            <p class = 'stats-text' id = 'stats-primaIncercare-text'> Prima încercare: 0 </p>
+            <p id = 'next-button' onclick="
+            localStorage.setItem('corecte', Number(localStorage.getItem('corecte'))+1);
+            if(localStorage.getItem('primaIncercare-bool') == 1) {
+            localStorage.setItem('primaIncercare', Number(localStorage.getItem('primaIncercare'))+1);}
+            window.location.reload()"> Următorul </p>
+        </div>
         </div>
          <div id = "grid-container">
-            <div id = "grid-item"> <p id = "solution-text">Solution 1 </p></div>
-            <div id = "grid-item"> <p id = "solution-text">Solution 2 </p></div>
-            <div id = "grid-item"> <p id = "solution-text">Solution 3 </p></div>
-            <div id = "grid-item"> <p id = "solution-text">Solution 4 </p></div>
+            <div id = "grid-item"> <p class = "solution-text" id = "variant0" onclick = validareRaspuns(event)>Solution 1 </p></div>
+            <div id = "grid-item"> <p class = "solution-text" id = "variant1" onclick = validareRaspuns(event)>Solution 2 </p></div>
+            <div id = "grid-item"> <p class = "solution-text" id = "variant2" onclick = validareRaspuns(event)>Solution 3 </p></div>
+            <div id = "grid-item"> <p class = "solution-text" id = "variant3" onclick = validareRaspuns(event)>Solution 4 </p></div>
          </div>
     </div>
 </body>

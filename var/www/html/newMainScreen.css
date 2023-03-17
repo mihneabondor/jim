@@ -48,14 +48,14 @@ body {
     transform: scale(0.95);
 }
 
-  #image-forme {
-    padding-top: 10vh;
-    padding-left: 10vw;
-    height: 50%;
-  }
+#image-forme {
+  padding-top: 10vh;
+  padding-left: 10vw;
+  height: 50%;
+}
 
-  #image-numere {
-    padding-top: 10vh;
-    padding-left: 10vw;
-    height: 50%;
-  }
+#image-numere {
+  padding-top: 10vh;
+  padding-left: 10vw;
+  height: 50%;
+}

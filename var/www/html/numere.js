@@ -2,12 +2,15 @@ const { index } = require("mathjs");
 
 function validareRaspuns(event)
 {
+    console.log(equation);
     if(event.target.id === "corect") {
-        event.target.style.background = 'green';
-        const urmatorulButton = document.getElementById("btnNext");
-        urmatorulButton.style.visibility = "visible";
+        event.target.parentElement.style.background = 'rgb(80, 200, 120)';
+        document.getElementById('next-button').style.visibility = 'visible';
     } else {
-        event.target.style.background = 'red';
+        event.target.parentElement.classList.toggle('shake');
+        document.getElementById('equation-step1').style.visibility = 'visible';
+        localStorage.setItem('primaIncercare-bool', 0);
+        localStorage.setItem('primaIncercare', 0);
     }
 }
 
@@ -28,7 +31,7 @@ function getRandomArbitrary(min, max) {
 }
 
 function generateEquation() {
-    let numberCount = getRandomArbitrary(3, 6), numere = [], indexSemne = [], semne = ["+", "-", "*"];
+    let numberCount = getRandomArbitrary(3,5), numere = [], indexSemne = [], semne = ["+", "-", "*"];
     for(let i = 1; i <= numberCount; i++) {
         let randSemne = getRandomArbitrary(0,3), randNumere = getRandomArbitrary(1,10);
         numere.push(randNumere);
@@ -41,6 +44,18 @@ function generateEquation() {
     }
 
     equation = equation.substring(0, equation.length-2);
+
+    let position = equation.indexOf('*');
+    if(position != -1) {
+        let newEquation = equation.charAt(position-2) + ' ' + equation.charAt(position) + ' ' + equation.charAt(position+2);
+        document.getElementById('equation-step1').innerHTML = equation.replace(newEquation, math.evaluate(newEquation)) + ' = ?';
+    } else {
+        let newEquation = equation.charAt(0) + ' ' + equation.charAt(2) + ' ' + equation.charAt(4);
+        console.log(newEquation)
+        document.getElementById('equation-step1').innerHTML = equation.replace(newEquation, math.evaluate(newEquation)) + ' = ?';
+    }
+    console.log(position);
+
     return equation;
 }
 
@@ -63,7 +78,7 @@ function generateAnswers(equation) {
 }
 
 function setEquation(equation) {
-    document.getElementById("equation").innerHTML = equation
+    document.getElementById("equation").innerHTML = equation + ' = ?'
 }
 
 function setButtons(){
@@ -95,4 +110,9 @@ function prepareScreen() {
         else
             document.getElementById("variant"+i).id = "gresit"
     }
+
+    localStorage.setItem('primaIncercare-bool', 1);
+
+    document.getElementById('stats-corecte-text').innerHTML = 'Corecte: ' + localStorage.getItem('corecte')
+    document.getElementById('stats-primaIncercare-text').innerHTML = 'Prima încercare: ' + localStorage.getItem('primaIncercare')
 }
