@@ -6,6 +6,8 @@ function validareRaspuns(event)
     if(event.target.id === "corect") {
         event.target.parentElement.style.background = 'rgb(80, 200, 120)';
         document.getElementById('next-button').style.visibility = 'visible';
+        document.getElementById('next-button').style.opacity = '1';
+        document.getElementById('stats-container').classList.add('verticalTranslate')
     } else {
         event.target.parentElement.classList.toggle('shake');
         document.getElementById('equation-step1').style.visibility = 'visible';
@@ -54,7 +56,7 @@ function generateEquation() {
         console.log(newEquation)
         document.getElementById('equation-step1').innerHTML = equation.replace(newEquation, math.evaluate(newEquation)) + ' = ?';
     }
-    console.log(position);
+    localStorage.setItem('equation', equation)
 
     return equation;
 }

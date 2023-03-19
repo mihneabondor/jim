@@ -86,15 +86,23 @@ body {
 }
 
 #stats-container {
-    transform: translate(8vw, 15vh);
+    transform: translate(8vw, 13vh);
     height: 25vh;
     width: 20vw;
-
     border: 1px solid rgba(0, 0, 0, 0.8);
     background-color: white;
     border-radius: 5%;
     box-shadow: 5px 5px;
 }
+
+#stats-container.verticalTranslate {
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 1s;
+    height: 30vh;
+  }
 
 .stats-text {
     padding-left: 1vw;
@@ -102,6 +110,19 @@ body {
 
 #stats-header {
     text-align: center;
+}
+
+#rezolvare-button {
+    text-align: center;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    text-align: center;
+    cursor: pointer;
+    background-color: #EC9192;
+}
+
+#rezolvare-button:hover{
+    background-color: #DB5375;
 }
 
 #help-button {
@@ -118,6 +139,8 @@ body {
     cursor: pointer;
     background-color: #EC9192;
     visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s linear;
 }
 
 #next-button:hover{
