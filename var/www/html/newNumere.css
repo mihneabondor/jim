@@ -2,6 +2,10 @@ body {
     background-color: rgb(254, 199, 74);
 }
 
+@font-face{
+    font-family:jungle;
+    src:url("jungle-hope/Jungle Hope Free Version.ttf");
+}
 #page-container {
     height: 95vh;
 }
@@ -19,6 +23,8 @@ body {
 #equation {
     padding-left: 7vw;
     font-size: 45px;
+    font-family: jungle;
+    font-size:48px;
 }
 
 #grid-container {
@@ -32,6 +38,7 @@ body {
     row-gap: 5vh;
     justify-content: center;
     align-content: center;
+  
 }
 
 #grid-item {
@@ -45,6 +52,8 @@ body {
     text-align: center;
     cursor: pointer;
     transition: transform .2s;
+    font-family: jungle;
+    font-size:40px;
 }
 
 #grid-item:hover {
@@ -67,6 +76,7 @@ body {
     display: grid;
     grid-template-columns: auto auto;
     /* transform: translate(0vw, -8vh); */
+    
 }
 
 .wrapper-item:first-child {
@@ -78,6 +88,9 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-top: 0vh;
+    height: 15vh;
+    border-radius: 10%;
 }
 
 #equation-container-grid {
@@ -93,6 +106,8 @@ body {
     background-color: white;
     border-radius: 5%;
     box-shadow: 5px 5px;
+    font-family: jungle;
+    font-size:20px;
 }
 
 #stats-container.verticalTranslate {

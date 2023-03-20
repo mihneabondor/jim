@@ -1,4 +1,4 @@
-const { index } = require("mathjs");
+const { index, number } = require("mathjs");
 
 function validareRaspuns(event)
 {
@@ -33,7 +33,8 @@ function getRandomArbitrary(min, max) {
 }
 
 function generateEquation() {
-    let numberCount = getRandomArbitrary(3,5), numere = [], indexSemne = [], semne = ["+", "-", "*"];
+    let numberCount = getRandomArbitrary(3,5), numere = [], indexSemne = [], semne = ["+", "-", "*"]
+
     for(let i = 1; i <= numberCount; i++) {
         let randSemne = getRandomArbitrary(0,3), randNumere = getRandomArbitrary(1,10);
         numere.push(randNumere);
@@ -53,7 +54,6 @@ function generateEquation() {
         document.getElementById('equation-step1').innerHTML = equation.replace(newEquation, math.evaluate(newEquation)) + ' = ?';
     } else {
         let newEquation = equation.charAt(0) + ' ' + equation.charAt(2) + ' ' + equation.charAt(4);
-        console.log(newEquation)
         document.getElementById('equation-step1').innerHTML = equation.replace(newEquation, math.evaluate(newEquation)) + ' = ?';
     }
     localStorage.setItem('equation', equation)
@@ -66,16 +66,10 @@ function generateAnswers(equation) {
     let  answers = [];
     let correctAnswer = math.evaluate(equation);
     answers.push(correctAnswer);
-    answers.push(getRandomArbitrary(correctAnswer/2, correctAnswer-1));
-    answers.push(getRandomArbitrary(correctAnswer+1, correctAnswer*2));
-    answers.push(getRandomArbitrary(correctAnswer+1, correctAnswer*2));
+    answers.push(getRandomArbitrary(correctAnswer-8, correctAnswer+8));
+    answers.push(getRandomArbitrary(correctAnswer+9, correctAnswer+16));
+    answers.push(getRandomArbitrary(correctAnswer-16, correctAnswer-9)); 
     answers=randomize(answers);
-    if(answers[0]===answers[1])
-        answers[1]+=1;
-     if(answers[0]===answers[2]) 
-        answers[2]+=8;
-     if(answers[0]===answers[3]) 
-         answers[3]+=5;
     return answers
 }
 

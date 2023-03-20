@@ -40,12 +40,12 @@
                 <!-- <p id = 'help-button' onclick = 'console.log("dsfdsds")'> Ajutor</p> -->
                 <div id = "wrapper">
                 <h1 class = "wrapper-item" id = "equation"> 3*5+7 = ? </h1>
-                <p class = "wrapper-item" id = "equation-step1"> 15+7 = ? </p>
-                <img class = "wrapper-item" src = "Resources/jim_dance.png" id = "jim-picture">
+                <p class = "wrapper-item" id = "equation-step1"> 15+7 = ? </p>  
+                <img class = "wrapper-item" src = "Resources/jim_like.png" id = "jim-picture">
             </div>
         </div>
         <div id = "stats-container">
-            <div id = 'stats-header'><h3> Streaks </h3></div>
+            <div id = 'stats-header'><h3> Scor </h3></div>
             <p class = 'stats-text' id = 'stats-corecte-text'> Corecte: 0 </p>
             <p class = 'stats-text' id = 'stats-primaIncercare-text'> Prima încercare: 0 </p>
             <p id = "rezolvare-button" onclick = "window.open('rezolvare.html')"> Rezolvare pas cu pas </p>
@@ -53,7 +53,7 @@
             localStorage.setItem('corecte', Number(localStorage.getItem('corecte'))+1);
             if(localStorage.getItem('primaIncercare-bool') == 1) {
             localStorage.setItem('primaIncercare', Number(localStorage.getItem('primaIncercare'))+1);}
-            window.location.reload()"> Următorul </p>
+            window.location.reload()"> Urmatorul </p>
         </div>
         </div>
          <div id = "grid-container">

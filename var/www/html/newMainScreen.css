@@ -2,12 +2,17 @@ body {
     background-color: rgb(98, 163, 255);
     font-family: Arial, Helvetica, sans-serif;
 }
-
+@font-face{
+    font-family:jungle;
+    src:url("jungle-hope/Jungle Hope Free Version.ttf");
+}
 #title {
     color: white;
     font-size: 35px;
     padding-bottom: 10vh;
     text-shadow: 2px 2px black;
+    font-family: jungle;
+    font-size:50px;
 }
 
 #title-container {
@@ -42,6 +47,9 @@ body {
     box-shadow: 5px 10px;
     cursor: pointer;
     transition: transform .2s;
+    font-family: jungle;
+    font-size:50px;
+
   }
 
 .grid-item:hover {
