@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="newNumere.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script src="calculator.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+          $("#calculator").load("calculator.html");
+        });
+        </script>
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+        integrity=
+"sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer"></script>
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
+        integrity=
+"sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer"></script>
+    <script src="numere.js"></script>
+    <title>Numere</title>
+</head>
+<body onload = "prepareScreen()">
+    <div id="calculator"></div>
+    <div id = "page-container">
+        <div id = "equation-container-grid">
+            <div id = "equation-container">
+                <!-- <p id = 'help-button' onclick = 'console.log("dsfdsds")'> Ajutor</p> -->
+                <div id = "wrapper">
+                <h1 class = "wrapper-item" id = "equation"> 3*5+7 = ? </h1>
+                <p class = "wrapper-item" id = "equation-step1"> 15+7 = ? </p>  
+                <img class = "wrapper-item" src = "Resources/jim_like.png" id = "jim-picture">
+            </div>
+        </div>
+        <div id = "stats-container">
+            <div id = 'stats-header'><h3> Scor </h3></div>
+            <p class = 'stats-text' id = 'stats-corecte-text'> Corecte: 0 </p>
+            <p class = 'stats-text' id = 'stats-primaIncercare-text'> Prima încercare: 0 </p>
+            <p id = "rezolvare-button" onclick = "window.open('rezolvare.html')"> Rezolvare pas cu pas </p>
+            <p id = 'next-button' onclick="
+            localStorage.setItem('corecte', Number(localStorage.getItem('corecte'))+1);
+            if(localStorage.getItem('primaIncercare-bool') == 1) {
+            localStorage.setItem('primaIncercare', Number(localStorage.getItem('primaIncercare'))+1);}
+            window.location.reload()"> Urmatorul </p>
+        </div>
+        </div>
+         <div id = "grid-container">
+            <div id = "grid-item"> <p class = "solution-text" id = "variant0" onclick = validareRaspuns(event)>Solution 1 </p></div>
+            <div id = "grid-item"> <p class = "solution-text" id = "variant1" onclick = validareRaspuns(event)>Solution 2 </p></div>
+            <div id = "grid-item"> <p class = "solution-text" id = "variant2" onclick = validareRaspuns(event)>Solution 3 </p></div>
+            <div id = "grid-item"> <p class = "solution-text" id = "variant3" onclick = validareRaspuns(event)>Solution 4 </p></div>
+         </div>
+    </div>
+</body>
+</html>

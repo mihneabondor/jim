@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    <title>Jim</title>
+
+    <script src=
+    "https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+            integrity=
+    "sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer"></script>
+        <script src=
+    "https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
+            integrity=
+    "sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer"></script>
+
+</head>
+    <body onload="
+    setTimeout(function() {
+        document.body.className += ' loaded';
+    }, 2000);">
+        <div style="text-align: center;">
+            <h1 class="startTitle"> Jocuri interactive de matematică</h1>
+        </div>
+        <div class="btnStart">
+            <div class="btn" id = "btn1" onclick="openPageForme()">
+                <img src="Resources/formeBackground.jpg" class="imgStart">
+                <h2> Forme </h2>
+            </div>
+
+            <div class="btn" id = "btn2" onclick="window.open('numere.html')">
+                <img src="Resources/numereBackground.jpg" class="imgStart">
+                <h2> Numere </h2>
+            </div>
+
+            <div class="btn" id = "btn3">
+                <a href = "fractii.html">
+                <img src="Resources/fractiiBackground.jpg" class="imgStart">
+                <h2> Fracții </h2>
+                </a>
+            </div>
+        </div>
+    </body>
+</html>

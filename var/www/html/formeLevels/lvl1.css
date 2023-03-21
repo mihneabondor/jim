@@ -1,0 +1,179 @@
+:root{
+    --blue: #729EA1;
+    --sage: #B5BD89;
+    --olivine: #95B67F;
+    --tan: #DFBE99;
+    --lightCoral: #EC9192;
+    --blush: #DB5375;
+    --background: #D3D3D3;
+}
+
+@font-face {
+    font-family: andika;
+    src: url("../Andika/Andika-Regular.ttf");
+}
+
+@font-face {
+    font-family: andikaBold;
+    src: url("../Andika/Andika-Bold.ttf");
+}
+
+#patrat{
+    position:relative;
+    text-align: center; 
+}
+
+
+.btnLVL1{
+    background-color: var(--background);
+    width:20%;
+    height:18%;
+    font-family: andika;
+    font-weight: bold;
+    font-size:40px;
+    margin:1.5%;
+    letter-spacing:1.2px;
+
+}
+
+.btnLVL1:hover{
+    background: gray;
+}
+
+body{
+    background-color: var(--blue);
+}
+
+#urmatorul {
+    position:relative;
+    text-align:center;
+    margin-top:35%;
+}
+#btnNext{
+    cursor: pointer;
+    visibility: hidden;
+    background-color: var(--background);
+    width:15%;
+    height:8%;
+    font-family: andika;
+    font-weight: bold;
+    font-size:25px;
+    margin:1.5%;
+    letter-spacing:1.2px;
+
+}
+
+#checkmark2{
+    display: inline-block;
+    width: 50px;
+    height:50px;
+    -ms-transform: rotate(45deg); 
+    -webkit-transform: rotate(45deg); 
+    transform: rotate(45deg);
+    visibility: hidden;
+}
+
+.checkmark-root2{
+    position: absolute;
+    width:20px;
+    height:60px;
+    background-color: green;
+    left:59px;
+    top:-28px;
+}
+
+.checkmark-boddy2{
+    position: absolute;
+    width:20px;
+    height:20px;
+    background-color: green;
+    left:40px;
+    top:12px;
+}
+
+#checkmark1{
+    display: inline-block;
+    width: 50px;
+    height:50px;
+    -ms-transform: rotate(45deg); 
+    -webkit-transform: rotate(45deg); 
+    transform: rotate(45deg);
+    visibility: hidden;
+}
+
+.checkmark-root1{
+    position: absolute;
+    width:20px;
+    height:60px;
+    background-color: red;
+    left:59px;
+    top:-28px;
+}
+
+.checkmark-boddy1{
+    position: absolute;
+    width:20px;
+    height:60px;
+    background-color: red;
+    left:59px;
+    top:-28px;
+    transform: rotate(90deg);
+}  
+
+#checkmark3{
+    display: inline-block;
+    width: 50px;
+    height:50px;
+    -ms-transform: rotate(45deg); 
+    -webkit-transform: rotate(45deg); 
+    transform: rotate(45deg);
+    visibility: hidden;
+}
+
+.checkmark-root3{
+    position: absolute;
+    width:20px;
+    height:60px;
+    background-color: red;
+    left:59px;
+    top:-28px;
+}
+
+.checkmark-boddy3{
+    position: absolute;
+    width:20px;
+    height:60px;
+    background-color: red;
+    left:59px;
+    top:-28px;
+    transform: rotate(90deg);
+}  
+
+#checkmark4{
+    display: inline-block;
+    width: 50px;
+    height:50px;
+    -ms-transform: rotate(45deg); 
+    -webkit-transform: rotate(45deg); 
+    transform: rotate(45deg);
+    visibility: hidden;
+}
+
+.checkmark-root4{
+    position: absolute;
+    width:20px;
+    height:60px;
+    background-color: red;
+    left:59px;
+    top:-28px;
+}
+
+.checkmark-boddy4{
+    position: absolute;
+    width:20px;
+    height:60px;
+    background-color: red;
+    left:59px;
+    top:-28px;
+    transform: rotate(90deg);
+}  

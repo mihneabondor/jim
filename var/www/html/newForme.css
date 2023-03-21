@@ -1,0 +1,71 @@
+body {
+    background-color: rgb(50, 213, 131);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#page-container {
+    height: 95vh;
+}
+
+#main-container {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    height: 55vh;
+    width: 60vw;
+    background-color: white;
+    transform: translate(20vw, 10vh);
+    box-shadow: 5px 10px;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#cerinta-container{
+    text-align: center;
+    transform: translate(27vw, 17vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45vw;
+    background-color: white;
+    box-shadow: 5px 5px;
+    border-radius: 5%;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+#cerinta-text {
+    padding-right: 1vw;
+    padding-left: 1vw;
+    font-size: 25px;
+}
+
+#solution-input {
+    text-align: center;
+    width: 6vw;
+    font-size: 25px;
+}
+
+#shape-container {
+    margin-top: 3%;
+    width: 80%;
+    height: 70%;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    transform: translate(0vw, 5vh);
+    transition: transform 1s;
+    border-radius: 5%;
+}
+
+#next-button {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 5%;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 2s;
+    font-size: 25px;
+}

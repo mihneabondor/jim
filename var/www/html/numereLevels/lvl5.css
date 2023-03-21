@@ -1,0 +1,92 @@
+:root{
+    --blue: #729EA1;
+    --sage: #B5BD89;
+    --olivine: #95B67F;
+    --tan: #DFBE99;
+    --lightCoral: #EC9192;
+    --blush: #DB5375;
+    --background: #D3D3D3;
+}
+
+@font-face {
+    font-family: andika;
+    src: url("../Andika/Andika-Regular.ttf");
+}
+
+@font-face {
+    font-family: andikaBold;
+    src: url("../Andika/Andika-Bold.ttf");
+}
+body{
+    background-color: var(--blue);
+}
+
+#urmatorul {
+    position:relative;
+    text-align:center;
+    margin-top:26%;
+}
+
+#btnNext{
+    cursor: pointer;
+    visibility: hidden;
+    background-color: var(--background);
+    width:16%;
+    height:10%;
+    font-family: andika;
+    font-weight: bold;
+    font-size:25px;
+    margin:1.5%;
+    letter-spacing:1.2px;
+}
+#symb{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    margin-right: -50%;
+    transform: translate(-10%, -140%);
+    text-align: center;
+    font-family: andika;
+    font-weight:bold;
+    font-size:150px; 
+}
+#symb2{
+    visibility: hidden;
+    position: absolute;
+    top: 40%;
+    left: 65%;
+    margin-right: -50%;
+    transform: translate(-10%, -140%);
+    text-align: center;
+    font-family: andika;
+    font-weight:bold;
+    font-size:150px;
+}
+#patrat{
+    margin-top:0%;
+    position:relative;
+    text-align: center; 
+}
+
+.btnLVL5{
+    background-color: var(--background);
+    width:20%;
+    height:18%;
+    font-family: andika;
+    font-weight: bold;
+    font-size:40px;
+    margin:1.5%;
+    letter-spacing:1.2px;
+
+}
+
+.btnLVL1:hover{
+    background: gray;
+}
+
+#cerinta{
+    position:relative;
+    text-align: center;
+    font-size:50px;
+    margin-right:4%;
+}

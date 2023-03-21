@@ -1,0 +1,69 @@
+body {
+    background-color: rgb(98, 163, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+@font-face{
+    font-family:jungle;
+    src:url("jungle-hope/Jungle Hope Free Version.ttf");
+}
+#title {
+    color: white;
+    font-size: 35px;
+    padding-bottom: 10vh;
+    text-shadow: 2px 2px black;
+    font-family: jungle;
+    font-size:50px;
+}
+
+#title-container {
+    text-align: center;
+}
+
+#page-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.grid-container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 30%;
+    grid-auto-flow: column;
+}
+
+.grid-item {
+    font-size: 25px;
+    font-weight: 510;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    height: 40vh;
+    width: 25vw;
+    padding-left: 15px;
+    padding-top: 20px;
+    border-radius: 10%;
+    box-shadow: 5px 10px;
+    cursor: pointer;
+    transition: transform .2s;
+    font-family: jungle;
+    font-size:50px;
+
+  }
+
+.grid-item:hover {
+    transform: scale(0.95);
+}
+
+#image-forme {
+  padding-top: 10vh;
+  padding-left: 10vw;
+  height: 50%;
+}
+
+#image-numere {
+  padding-top: 10vh;
+  padding-left: 10vw;
+  height: 50%;
+}

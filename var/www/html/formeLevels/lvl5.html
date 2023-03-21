@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lvl5.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="lvl5.js"></script>
+    <script src="../main.js"></script>
+    <title>Forma corecta</title>
+   
+    <link rel="stylesheet" href="..\calculator.css">
+    <script src="../calculator.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script> 
+        $(function(){
+          $("#calculator").load("../calculator.html");
+        });
+        </script>
+</head>
+<body>
+    <div id="calculator"></div>
+    <div id="urmatorul">
+        <button id="btnNext" onclick="next()"> 
+          Urmatorul
+        </button>    
+    </div>
+    <div id="patrat">
+        <button class="btnLVL5" id = "gresit1" onclick = validareRaspuns(event)>Patrat
+          <div id = "checkmark1">
+            <div class = "checkmark-root1"></div>
+            <div class = "checkmark-boddy1"></div>
+          </div>
+        </button>
+        <button class="btnLVL5" id="gresit2" onclick = validareRaspuns(event)>Oval
+          <div id = "checkmark2">
+            <div class = "checkmark-root2"></div>
+            <div class = "checkmark-boddy2"></div>
+          </div>
+        </button>
+        <button class="btnLVL5" id = "gresit3" onclick = validareRaspuns(event)>Cerc
+          <div id = "checkmark3">
+            <div class = "checkmark-root3"></div>
+            <div class = "checkmark-boddy3"></div>
+          </div>
+        </button>
+        <button class="btnLVL5" id = "corect" onclick = validareRaspuns(event)>Cub
+          <div id = "checkmark4">
+            <div class = "checkmark-root4"></div>
+            <div class = "checkmark-boddy4"></div>
+          </div>
+        </button>
+    </div>
+</body>
+</html>

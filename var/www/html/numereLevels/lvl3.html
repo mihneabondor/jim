@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lvl3.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script src="lvl1.js"></script>
+    <script src="../main.js"></script>
+    <title>Calculeaza</title>
+    <link rel="stylesheet" href="..\calculator.css">
+    <script src="../calculator.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script> 
+        $(function(){
+          $("#calculator").load("../calculator.html");
+        });
+        </script>
+   
+</head>
+<body>
+  <h1 id="cerinta"> Calculeaza </h1>
+  <div id="calculator"></div>
+    <div id="urmatorul">
+        <button id="btnNext" onclick="next2()"> 
+          Urmatorul
+        </button>    
+    </div>
+    
+    <p id="symb">5 x 0 = </p>
+    <p id="symb2"> 0</p>
+    <div id="patrat">
+        <button class="btnLVL3" id = "gresit" onclick = validareRaspuns(event)>3</button>
+        <button class="btnLVL3" id="gresit" onclick = validareRaspuns(event)>1</button>
+        <button class="btnLVL3" id = "gresit" onclick = validareRaspuns(event)>5</button>
+        <button class="btnLVL3" id = "corect" onclick = validareRaspuns(event)>0</button>
+    </div>
+</body>
+</html>

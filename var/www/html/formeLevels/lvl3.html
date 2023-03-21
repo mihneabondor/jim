@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lvl3.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+    <script src="lvl3.js"></script>
+    <script src="../main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <Title> Reconstruieste forma </Title>
+    <script>
+    var snappedElementsCount = 0;
+        $( function(id) {
+            $( ".draggable" ).draggable(
+                {
+                    snapTolerance:50,
+                    snap:".target",
+                    stop: function(event, ui) {
+                    var snapped = $(this).data('ui-draggable').snapElements;
+                    var snappedTo = $.map(snapped, function(element) {
+                    return element.snapping ? element.item : null;
+                    });
+                    if(snappedTo.length != 0) {
+                        snappedElementsCount += 1;
+                    } else {
+                        snappedElementsCount -= 1;
+                    }
+                    console.log(snappedElementsCount);
+                    const urmatorulButton = document.getElementById("btnNext");
+                    if(snappedElementsCount == 2) {
+                        urmatorulButton.style.visibility = "visible";
+                    } else {
+                        urmatorulButton.style.visibility = "hidden";
+                    }
+                    }
+                }
+            );
+        } );
+    </script>
+</head>
+<body>
+
+    <div id="patrat-box">
+    <div class="target" id="linie-orizontala"></div>
+    <div class="patrat" id = "ceva"></div>
+    </div>
+    <div class = "canvas"></div>
+    <div class="tri">
+        <div class="draggable" id="one"> </div>
+        <div class="draggable" id="two"></div>
+    </div>
+
+    <div id="urmatorul">
+        <button id="btnNext" onclick="next()"> 
+          Urmatorul
+        </button>    
+    </div>
+</body>
+</html>

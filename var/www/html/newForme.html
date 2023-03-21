@@ -1,0 +1,50 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="newForme.css">
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+        <script src="newForme.js"></script>
+        <script src="../calculator.js"></script>
+        <title>Forme</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+        <script>
+            $(function(){
+              $("#calculator").load("calculator.html");
+            });
+            </script>
+        <script src=
+    "https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+            integrity=
+    "sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer"></script>
+        <script src=
+    "https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
+            integrity=
+    "sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer"></script>
+    </head>
+<body onload = 'prepareScreen()'>
+    <div id = 'calculator'></div>
+    <div id = 'page-container'>
+        <div id = 'main-container'>
+            <div id = 'shape-container'> </div>
+            <p id = 'next-button' onclick = 'window.location.reload()'> Urmatorul </p>
+        </div>
+        <div id = 'cerinta-container'>
+            <p id = 'cerinta-text'>
+                Unghiul lipsa este egal cu
+            </p>
+            <input type="number" id="solution-input" name="name" value = 0 max = '330' step = '5' onchange = 'validateAnswer()'>
+            <p id = 'cerinta-text'>
+                grade
+            </p>
+        </div>
+    </div>
+</body>
+</html>
