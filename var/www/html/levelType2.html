@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="newForme.css">
         <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+        <script src="levelType2.js"></script>
         <script src="newForme.js"></script>
         <script src="../calculator.js"></script>
         <title>Forme</title>
@@ -34,15 +35,14 @@
     <div id = 'page-container'>
         <div id = 'main-container'>
             <div id = 'shape-container'> </div>
-            <p id = 'next-button' onclick = 'window.location.reload()'> Urmatorul </p>
+            <p id = 'next-button' onclick = 'newPageForme()'> Urmatorul </p>
         </div>
         <div id = 'cerinta-container'>
             <p id = 'cerinta-text'>
-                Unghiul lipsa este egal cu
+                Numarul de laturi ale formei este de 
             </p>
-            <input type="number" id="solution-input" name="name" value = 0 max = '10' step = '5' onchange = 'validateAnswer()' autocomplete="off">
+            <input type="number" id="solution-input" name="name" value = 0 max = '15' min='0' step = '1' onchange = 'validateAnswer()' autocomplete="off">
             <p id = 'cerinta-text'>
-                grade
             </p>
         </div>
     </div>
