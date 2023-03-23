@@ -1,5 +1,3 @@
-const { index, number } = require("mathjs");
-
 function validareRaspuns(event)
 {
     console.log(equation);

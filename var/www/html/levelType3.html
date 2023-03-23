@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="newForme.css">
         <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
-        <script src="newForme.js"></script>
+        <script src="levelType3.js"></script>
+        <link rel="stylesheet" href="Header/header.css">
         <script src="../calculator.js"></script>
         <title>Forme</title>
         <script src="https://code.jquery.com/jquery-3.3.1.js"
@@ -29,21 +30,20 @@
             crossorigin="anonymous" 
             referrerpolicy="no-referrer"></script>
     </head>
-<body onload = 'prepareScreen()'>
+<body>
     <div id = 'calculator'></div>
     <div id = 'page-container'>
         <div id = 'main-container'>
             <div id = 'shape-container'> </div>
             <p id = 'next-button' onclick = 'window.location.reload()'> Urmatorul </p>
         </div>
-        <div id = 'cerinta-container'>
+        <div id = 'cerinta-container' style = 'width: 60vw; transform: translate(20vw, 15vh);'>
             <p id = 'cerinta-text'>
-                Unghiul lipsa este egal cu
+                Punctul se afla la coordinatele: X = 
             </p>
-            <input type="number" id="solution-input" name="name" value = 55 max = '330' step = '5' onchange = 'validateAnswer()' autocomplete="off">
-            <p id = 'cerinta-text'>
-                grade
-            </p>
+            <input type="number" id="solution-inputX" style = 'text-align: center;width: 6vw;font-size: 25px;' name="name" value = 0 min = 0 max = 9 onchange = 'validateAnswer()' autocomplete="off">
+            <p id = 'cerinta-text'> Y = </p>
+            <input type="number" id="solution-inputY" style = 'text-align: center;width: 6vw;font-size: 25px;' name="name" value = 0 min = 0 max = 9 onchange = 'validateAnswer()' autocomplete="off">
         </div>
     </div>
 </body>
