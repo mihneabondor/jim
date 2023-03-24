@@ -4,6 +4,8 @@ function validateAnswer() {
         document.getElementById('shape-container').style.transform = 'translate(0vw, 0vh)'
         document.getElementById('next-button').style.visibility = 'visible'
         document.getElementById('next-button').style.opacity = 1
+        const jsConfetti = new JSConfetti()
+        jsConfetti.addConfetti()
     }
 }
 function getRandomArbitrary(min, max) {
@@ -78,7 +80,7 @@ function setup()
         polygon(30,30,30,4);
         polygon(60,-60,30,4);
         polygon(-30,-30,30,4);
-        //pula-n gura nush sa fac o cruce
+        //gura mea nush sa fac o cruce
 
     }
     else 

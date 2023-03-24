@@ -1,0 +1,181 @@
+body {
+    background-color: rgb(50, 213, 131);
+}
+
+@font-face{
+    font-family:jungle;
+    src:url("jungle-hope/Jungle Hope Free Version.ttf");
+}
+#page-container {
+    height: 95vh;
+}
+
+#forma-container {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    height: 35vh;
+    width: 50vw;
+    background-color: white;
+    transform: translate(15vw, 10vh);
+    box-shadow: 5px 10px;
+    border-radius: 5%;
+}
+
+#equation {
+    padding-left: 7vw;
+    font-size: 45px;
+    font-family: jungle;
+    font-size:48px;
+}
+
+#grid-container {
+    height: 40vh;
+    transform: translate(-7vw, 15vh);
+
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+    column-gap: 5vw;
+    row-gap: 5vh;
+    justify-content: center;
+    align-content: center;
+  
+}
+
+#grid-item {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    border-radius: 10%;
+    box-shadow: 5px 5px;
+    width: 30vw;
+    height: 15vh;
+    text-align: center;
+    cursor: pointer;
+    transition: transform .2s;
+    font-family: jungle;
+    font-size:40px;
+}
+
+#grid-item:hover {
+    transform: scale(0.95);
+}
+
+#equation-step1 {
+    padding-left: 7vw;
+    font-size: 30px;
+    visibility: hidden;
+    z-index: 100;
+}
+
+#jim-picture {
+    padding-left: 10vw;
+    height: 20vh;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    /* transform: translate(0vw, -8vh); */
+    
+}
+
+.wrapper-item:first-child {
+    grid-column: 1/3;
+}
+
+.solution-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0vh;
+    height: 15vh;
+    border-radius: 10%;
+}
+
+#equation-container-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#stats-container {
+    transform: translate(8vw, 13vh);
+    height: 25vh;
+    width: 20vw;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    background-color: white;
+    border-radius: 5%;
+    box-shadow: 5px 5px;
+    font-family: jungle;
+    font-size:20px;
+}
+
+#stats-container.verticalTranslate {
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 1s;
+    height: 30vh;
+  }
+
+.stats-text {
+    padding-left: 1vw;
+}
+
+#stats-header {
+    text-align: center;
+}
+
+#rezolvare-button {
+    text-align: center;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    text-align: center;
+    cursor: pointer;
+    background-color: #EC9192;
+}
+
+#rezolvare-button:hover{
+    background-color: #DB5375;
+}
+
+#help-button {
+    z-index: 100;
+    outline: dashed;
+    margin-left: 2vw;
+    cursor: pointer;
+}
+
+#next-button {
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    text-align: center;
+    cursor: pointer;
+    background-color: #EC9192;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+#next-button:hover{
+    background-color: #DB5375;
+}
+
+.shake {
+    animation: shake 0.6s;
+}
+  
+@keyframes shake {
+0% { transform: translate(1px, 1px) rotate(0deg); }
+10% { transform: translate(-1px, -2px) rotate(-1deg); }
+20% { transform: translate(-3px, 0px) rotate(1deg); }
+30% { transform: translate(3px, 2px) rotate(0deg); }
+40% { transform: translate(1px, -1px) rotate(1deg); }
+50% { transform: translate(-1px, 2px) rotate(-1deg); }
+60% { transform: translate(-3px, 1px) rotate(0deg); }
+70% { transform: translate(3px, 1px) rotate(-1deg); }
+80% { transform: translate(-1px, -1px) rotate(1deg); }
+90% { transform: translate(1px, 2px) rotate(0deg); }
+100% { transform: translate(1px, -2px) rotate(-1deg); }
+}

@@ -4,6 +4,9 @@ function validateAnswer() {
         document.getElementById('shape-container').style.transform = 'translate(0vw, 0vh)'
         document.getElementById('next-button').style.visibility = 'visible'
         document.getElementById('next-button').style.opacity = 1
+        document.getElementById('solution-input').disabled = true
+        const jsConfetti = new JSConfetti()
+        jsConfetti.addConfetti()
     }
 }
 

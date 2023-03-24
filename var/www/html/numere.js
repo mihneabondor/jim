@@ -2,6 +2,10 @@ function validareRaspuns(event)
 {
     console.log(equation);
     if(event.target.id === "corect") {
+        if(event.target.parentElement.style.background != 'rgb(80, 200, 120)'){
+            const jsConfetti = new JSConfetti()
+            jsConfetti.addConfetti()
+        }
         event.target.parentElement.style.background = 'rgb(80, 200, 120)';
         document.getElementById('next-button').style.visibility = 'visible';
         document.getElementById('next-button').style.opacity = '1';
@@ -95,7 +99,7 @@ function prepareScreen() {
     let equation = generateEquation()
     setEquation(equation)
     let answers = generateAnswers(equation)
-
+    
     for(let i = 0; i <= 3; i++) {
         let answer = answers[i]
         document.getElementById("variant"+i).innerHTML = answer

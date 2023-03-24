@@ -11,7 +11,7 @@ function randomize(array) {
     return array;
   }
 
-const lvl=["1","2"];
+const lvl=['1','2','3','4'];
 function newPageForme()
 {
     const shuffledLevels=randomize(lvl);

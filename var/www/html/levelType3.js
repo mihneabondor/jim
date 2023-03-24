@@ -17,6 +17,10 @@ function validateAnswer() {
         document.getElementById('shape-container').style.transform = 'translate(0vw, 0vh)'
         document.getElementById('next-button').style.visibility = 'visible'
         document.getElementById('next-button').style.opacity = 1
+        document.getElementById('solution-inputX').disabled = true
+        document.getElementById('solution-inputY').disabled = true
+        const jsConfetti = new JSConfetti()
+        jsConfetti.addConfetti()
     }
 }
 
@@ -66,4 +70,6 @@ function setup() {
     }
     rowLabel++
   }
+  text('X', COLUMNS*CELL_SIZE+11, ROWS*CELL_SIZE+15)
+  text('Y', -CELL_SIZE/2-1, -15)
 }
