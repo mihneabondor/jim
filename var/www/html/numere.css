@@ -8,16 +8,6 @@
     --background: rgb(254, 199, 74);
 }
 
-
-@font-face {
-    font-family: andika;
-    src: url("../Andika/Andika-Regular.ttf");
-}
-
-@font-face {
-    font-family: andikaBold;
-    src: url("../Andika/Andika-Bold.ttf");
-}
 body{
     background-color: var(--blue);
 }
