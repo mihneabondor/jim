@@ -59,7 +59,7 @@ function generateEquation() {
         document.getElementById('equation-step1').innerHTML = equation.replace(newEquation, math.evaluate(newEquation)) + ' = ?';
     }
     localStorage.setItem('equation', equation)
-
+    document.cookie = 'equation ='+equation
     return equation;
 }
 
@@ -96,7 +96,8 @@ function setButtons(){
 }
 
 function prepareScreen() {
-    let equation = generateEquation()
+    generateEquation()
+    let equation = document.cookie.replace('equation=', '')
     setEquation(equation)
     let answers = generateAnswers(equation)
     
