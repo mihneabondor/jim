@@ -95,7 +95,7 @@ body {
 
 #stats-container {
     transform: translate(8vw, 13vh);
-    height: 25vh;
+    height: 20vh;
     width: 20vw;
     border: 1px solid rgba(0, 0, 0, 0.8);
     background-color: white;
@@ -110,7 +110,7 @@ body {
     -ms-transition: 3s;
     -o-transition: 3s;
     transition: 1s;
-    height: 30vh;
+    height: 25vh;
   }
 
 .stats-text {

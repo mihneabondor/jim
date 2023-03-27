@@ -34,18 +34,28 @@
     </head>
 <body>
     <div id = 'calculator'></div>
-    <div id = 'page-container'>
-        <div id = 'main-container'>
-            <div id = 'shape-container'> </div>
-            <p id = 'next-button' onclick = 'newPageForme()'> Urmatorul </p>
+    <div id = "page-container">
+        <div id = "equation-container-grid">
+            <div id = "equation-container">
         </div>
-        <div id = 'cerinta-container' style = 'width: 60vw; transform: translate(20vw, 15vh);'>
+        <div id = "stats-container">
+            <div id = 'stats-header'><h3> Scor </h3></div>
+            <p class = 'stats-text' id = 'stats-corecte-text'> Corecte: 0 </p>
+            <p class = 'stats-text' id = 'stats-primaIncercare-text'> Prima încercare: 0 </p>
+            <p id = 'next-button' onclick="
+            localStorage.setItem('corecte', Number(localStorage.getItem('corecte'))+1);
+            if(localStorage.getItem('primaIncercare-bool') == 1) {
+            localStorage.setItem('primaIncercare', Number(localStorage.getItem('primaIncercare'))+1);}
+            window.location.reload()"> Urmatorul </p>
+        </div>
+        </div>
+        <div id = 'cerinta-container'>
             <p id = 'cerinta-text'>
-                Punctul se afla la coordinatele: X = 
+                Patratul colorat se afla la coordonatele: X = 
+                <input type="number" id="solution-inputX" name="name" value = 1 max = 10 min='0' onchange = 'validateAnswer()' autocomplete="off">
+                si Y = 
+                <input type="number" id="solution-inputY" name="name" value = 1 max = 10 min='0' onchange = 'validateAnswer()' autocomplete="off">
             </p>
-            <input type="number" id="solution-inputX" style = 'text-align: center;width: 6vw;font-size: 25px;' name="name" value = 0 min = 0 max = 9 onchange = 'validateAnswer()' autocomplete="off">
-            <p id = 'cerinta-text'> Y = </p>
-            <input type="number" id="solution-inputY" style = 'text-align: center;width: 6vw;font-size: 25px;' name="name" value = 0 min = 0 max = 9 onchange = 'validateAnswer()' autocomplete="off">
         </div>
     </div>
 </body>

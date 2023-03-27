@@ -14,11 +14,11 @@ function validateAnswer() {
     console.log(answerCoordinateX + ' ' + answerCoordinateY)
     let answerX = Number(document.getElementById('solution-inputX').value), answerY = Number(document.getElementById('solution-inputY').value)
     if(answerCoordinateX == answerX && answerCoordinateY == answerY) {
-        document.getElementById('shape-container').style.transform = 'translate(0vw, 0vh)'
         document.getElementById('next-button').style.visibility = 'visible'
         document.getElementById('next-button').style.opacity = 1
         document.getElementById('solution-inputX').disabled = true
         document.getElementById('solution-inputY').disabled = true
+        document.getElementById('stats-container').classList.add('verticalTranslate')
         const jsConfetti = new JSConfetti()
         jsConfetti.addConfetti()
     }
@@ -27,18 +27,18 @@ function validateAnswer() {
 const PADDING = 0;
 const ROWS = 10;
 const COLUMNS = 10;
-const CELL_SIZE = 25;
+const CELL_SIZE = 22;
 const CELL_COLOR = 'black';
 const CELL_COUNT = ROWS * COLUMNS;
 
 function setup() {
     setupVars()
-    let CANVAS_PARENT = document.getElementById('shape-container')
+    let CANVAS_PARENT = document.getElementById('equation-container')
     let canvas = createCanvas(CANVAS_PARENT.offsetWidth, CANVAS_PARENT.offsetHeight);
-    canvas.parent('shape-container')
+    canvas.parent('equation-container')
   noStroke();
 
-  translate(CANVAS_PARENT.offsetWidth/3.5, CANVAS_PARENT.offsetHeight/10)
+  translate(CANVAS_PARENT.offsetWidth/3, CANVAS_PARENT.offsetHeight/8)
   let colLabel = -9, rowLabel = 0
   fill(CELL_COLOR);
 

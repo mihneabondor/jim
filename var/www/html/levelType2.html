@@ -33,17 +33,25 @@
     </head>
 <body onload = 'prepareScreen()'>
     <div id = 'calculator'></div>
-    <div id = 'page-container'>
-        <div id = 'main-container'>
-            <div id = 'shape-container'> </div>
-            <p id = 'next-button' onclick = 'newPageForme()'> Urmatorul </p>
+    <div id = "page-container">
+        <div id = "equation-container-grid">
+            <div id = "equation-container">
+        </div>
+        <div id = "stats-container">
+            <div id = 'stats-header'><h3> Scor </h3></div>
+            <p class = 'stats-text' id = 'stats-corecte-text'> Corecte: 0 </p>
+            <p class = 'stats-text' id = 'stats-primaIncercare-text'> Prima încercare: 0 </p>
+            <p id = 'next-button' onclick="
+            localStorage.setItem('corecte', Number(localStorage.getItem('corecte'))+1);
+            if(localStorage.getItem('primaIncercare-bool') == 1) {
+            localStorage.setItem('primaIncercare', Number(localStorage.getItem('primaIncercare'))+1);}
+            window.location.reload()"> Urmatorul </p>
+        </div>
         </div>
         <div id = 'cerinta-container'>
             <p id = 'cerinta-text'>
-                Numarul de laturi ale formei este de 
-            </p>
-            <input type="number" id="solution-input" name="name" value = 0 max = '15' min='0' step = '1' onchange = 'validateAnswer()' autocomplete="off">
-            <p id = 'cerinta-text'>
+                Numarul de laturi al formei este
+                <input type="number" id="solution-input" name="name" value = 1 max = 10 min='0' onchange = 'validateAnswer()' autocomplete="off">
             </p>
         </div>
     </div>

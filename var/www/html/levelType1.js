@@ -1,12 +1,12 @@
 function validateAnswer() {
     let value = document.getElementById('solution-input').value
-    if(localStorage.getItem('answer') == value) {
-        document.getElementById('shape-container').style.transform = 'translate(0vw, 0vh)'
-        document.getElementById('next-button').style.visibility = 'visible'
-        document.getElementById('next-button').style.opacity = 1
-        document.getElementById('solution-input').disabled = true
+    if(Number(localStorage.getItem('answer')) == value) {
         const jsConfetti = new JSConfetti()
         jsConfetti.addConfetti()
+        document.getElementById('next-button').style.visibility = 'visible';
+        document.getElementById('next-button').style.opacity = '1';
+        document.getElementById('stats-container').classList.add('verticalTranslate')
+        document.getElementById('solution-input').disabled = true
     }
 }
 
@@ -33,7 +33,7 @@ function setupVars() {
 
 function setup() {
     var canvas = createCanvas(windowWidth/2.1,windowHeight/2.8)
-    canvas.parent('shape-container')
+    canvas.parent('equation-container')
     translate((windowWidth/2.1)/2, (windowHeight/2.8)/2)
     fill('violet')
     circle(0, 0, 200)

@@ -1,9 +1,10 @@
 function validateAnswer() {
     let value = document.getElementById('solution-input').value
-    if(localStorage.getItem('ans') == value) {
-        document.getElementById('shape-container').style.transform = 'translate(0vw, 0vh)'
+    if(Number(localStorage.getItem('ans')) == value) {
         document.getElementById('next-button').style.visibility = 'visible'
         document.getElementById('next-button').style.opacity = 1
+        document.getElementById('solution-input').disabled = true
+        document.getElementById('stats-container').classList.add('verticalTranslate')
         const jsConfetti = new JSConfetti()
         jsConfetti.addConfetti()
     }
@@ -39,7 +40,7 @@ function star(x, y, radius1, radius2, npoints) {
 function setup()
 {
     var canvas = createCanvas(windowWidth/2.1,windowHeight/2.8)
-    canvas.parent('shape-container')
+    canvas.parent('equation-container')
     translate((windowWidth/2.1)/2, (windowHeight/2.8)/2)
     let types=['3','4','5','6','7','8','9','10'];
     let col=["rgb(254, 199, 74)","rgb(98, 163, 255)"];

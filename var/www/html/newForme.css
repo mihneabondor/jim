@@ -7,65 +7,162 @@ body {
     height: 95vh;
 }
 
-#main-container {
+#equation-container {
     border: 1px solid rgba(0, 0, 0, 0.8);
-    height: 55vh;
-    width: 60vw;
+    height: 35vh;
+    width: 50vw;
     background-color: white;
-    transform: translate(20vw, 10vh);
+    transform: translate(15vw, 10vh);
     box-shadow: 5px 10px;
     border-radius: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
-#cerinta-container{
-    text-align: center;
-    transform: translate(27vw, 17vh);
-    display: flex;
+#equation {
+    padding-left: 7vw;
+    font-size: 45px;
+    font-size:48px;
+}
+
+#grid-container {
+    height: 40vh;
+    transform: translate(-7vw, 15vh);
+
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+    column-gap: 5vw;
+    row-gap: 5vh;
     justify-content: center;
-    align-items: center;
-    width: 45vw;
+    align-content: center;
+  
+}
+
+#cerinta-container {
     background-color: white;
-    box-shadow: 5px 5px;
-    border-radius: 5%;
     border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 10%;
+    box-shadow: 5px 5px;
+    width: 70vw;
+    height: 12vh;
+    text-align: center;
+    font-size:40px;
+    transform: translate(15vw, 20vh);
 }
 
 #cerinta-text {
-    padding-right: 1vw;
-    padding-left: 1vw;
-    font-size: 25px;
+    font-size: 30px;
 }
 
-#solution-input {
+.jim-img {
+    margin-left: 60%;
+    outline: dashed;
+}
+
+input {
+    font-size: 30px;
+}
+
+#grid-item:hover {
+    transform: scale(0.95);
+}
+
+#equation-step1 {
+    padding-left: 7vw;
+    font-size: 30px;
+    visibility: hidden;
+    z-index: 100;
+}
+
+#jim-picture {
+    padding-left: 10vw;
+    height: 20vh;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    /* transform: translate(0vw, -8vh); */
+    
+}
+
+.wrapper-item:first-child {
+    grid-column: 1/3;
+}
+
+.solution-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    width: 6vw;
-    font-size: 25px;
+    margin-top: 0vh;
+    height: 15vh;
+    border-radius: 10%;
 }
 
-#shape-container {
-    margin-top: 3%;
-    width: 80%;
-    height: 70%;
+#equation-container-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#stats-container {
+    transform: translate(8vw, 13vh);
+    height: 20vh;
+    width: 20vw;
     border: 1px solid rgba(0, 0, 0, 0.8);
-    transform: translate(0vw, 5vh);
-    transition: transform 1s;
+    background-color: white;
     border-radius: 5%;
+    box-shadow: 5px 5px;
+    font-size:20px;
+}
+
+#stats-container.verticalTranslate {
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 1s;
+    height: 25vh;
+  }
+
+.stats-text {
+    padding-left: 1vw;
+}
+
+#stats-header {
+    text-align: center;
+}
+
+#rezolvare-button {
+    text-align: center;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    text-align: center;
+    cursor: pointer;
+    background-color: #EC9192;
+}
+
+#rezolvare-button:hover{
+    background-color: #DB5375;
+}
+
+#help-button {
+    z-index: 100;
+    outline: dashed;
+    margin-left: 2vw;
+    cursor: pointer;
 }
 
 #next-button {
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    border-radius: 5%;
-    padding-left: 7%;
-    padding-right: 7%;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    text-align: center;
     cursor: pointer;
+    background-color: #EC9192;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 2s;
-    font-size: 25px;
+    transition: opacity 1s linear;
+}
+
+#next-button:hover{
+    background-color: #DB5375;
 }
