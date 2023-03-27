@@ -1,3 +1,7 @@
+@font-face{
+  font-family: avenir;
+  src: url("avenir_ff/AvenirLTStd-Black.otf");
+}
 :root{
     --blue: #729EA1;
     --sage: #B5BD89;
@@ -9,7 +13,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: avenir;
 }
 
 #inapoi-button {
@@ -21,10 +25,12 @@ body {
   border-radius: 22px;
   font-weight: 500;
   box-shadow: 2px 2px;
+
 }
 
 #inapoi-button:hover {
   background-color: #DB5375;
+  font-family: avenir;
 }
 
 .fadein {
@@ -40,7 +46,6 @@ body.loaded.fadein {
 }
 
 body {
-    font-family: andika, Arial;
     letter-spacing:1.2px;
 }
 
@@ -54,6 +59,8 @@ body {
     height: 30vh;
     border-radius: 15px;
     visibility: hidden;
+    font-family: avenir;
+
   }
   
   #calculator-body-header {

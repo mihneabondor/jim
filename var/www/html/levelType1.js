@@ -65,5 +65,7 @@ function setup() {
     y = r * sin(radians(pastSum)+0.5);
     fill('black')
     text('?', x, y)
-
+    localStorage.setItem('primaIncercare-bool', 1);
+    document.getElementById('stats-corecte-text').innerHTML = 'Corecte: ' + localStorage.getItem('corecte')
+    document.getElementById('stats-primaIncercare-text').innerHTML = 'Prima încercare: ' + localStorage.getItem('primaIncercare')
 } 

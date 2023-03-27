@@ -72,4 +72,7 @@ function setup() {
   }
   text('X', COLUMNS*CELL_SIZE+11, ROWS*CELL_SIZE+15)
   text('Y', -CELL_SIZE/2-1, -15)
+  localStorage.setItem('primaIncercare-bool', 1);
+  document.getElementById('stats-corecte-text').innerHTML = 'Corecte: ' + localStorage.getItem('corecte')
+  document.getElementById('stats-primaIncercare-text').innerHTML = 'Prima încercare: ' + localStorage.getItem('primaIncercare')
 }

@@ -1,6 +1,5 @@
 function validareRaspuns(event)
 {
-    console.log(equation);
     if(event.target.id === "corect") {
         if(event.target.parentElement.style.background != 'rgb(80, 200, 120)'){
             const jsConfetti = new JSConfetti()
@@ -95,7 +94,10 @@ function setButtons(){
     return buttons;
 }
 
+let jimi = ['cuminte', 'curios', 'dance', 'hug', 'inteligent', 'jump', 'like', 'lupa', 'push', 'wassup']
 function prepareScreen() {
+    let jimIndex = getRandomArbitrary(0, jimi.length)
+    document.getElementById('jim-picture').src = 'Resources/jim_'+jimi[jimIndex]+'.png'
     generateEquation()
     let equation = document.cookie.replace('equation=', '')
     setEquation(equation)
@@ -111,7 +113,6 @@ function prepareScreen() {
     }
 
     localStorage.setItem('primaIncercare-bool', 1);
-
     document.getElementById('stats-corecte-text').innerHTML = 'Corecte: ' + localStorage.getItem('corecte')
     document.getElementById('stats-primaIncercare-text').innerHTML = 'Prima încercare: ' + localStorage.getItem('primaIncercare')
 }

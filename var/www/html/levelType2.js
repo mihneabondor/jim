@@ -90,5 +90,7 @@ function setup()
         fill(random(col));
         polygon(0,0,90,type);
     }
-    
+    localStorage.setItem('primaIncercare-bool', 1);
+    document.getElementById('stats-corecte-text').innerHTML = 'Corecte: ' + localStorage.getItem('corecte')
+    document.getElementById('stats-primaIncercare-text').innerHTML = 'Prima încercare: ' + localStorage.getItem('primaIncercare')
 }

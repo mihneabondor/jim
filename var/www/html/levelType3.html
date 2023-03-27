@@ -46,17 +46,19 @@
             localStorage.setItem('corecte', Number(localStorage.getItem('corecte'))+1);
             if(localStorage.getItem('primaIncercare-bool') == 1) {
             localStorage.setItem('primaIncercare', Number(localStorage.getItem('primaIncercare'))+1);}
-            window.location.reload()"> Urmatorul </p>
+            newPageForme()"> Urmatorul </p>
+            
         </div>
         </div>
         <div id = 'cerinta-container'>
             <p id = 'cerinta-text'>
                 Patratul colorat se afla la coordonatele: X = 
-                <input type="number" id="solution-inputX" name="name" value = 1 max = 10 min='0' onchange = 'validateAnswer()' autocomplete="off">
+                <input type="number" id="solution-inputX" name="name" value = 1 max = 10 min='0' size ="1" onchange = 'validateAnswer()' autocomplete="off">
                 si Y = 
-                <input type="number" id="solution-inputY" name="name" value = 1 max = 10 min='0' onchange = 'validateAnswer()' autocomplete="off">
+                <input type="number" id="solution-inputY" name="name" value = 1 max = 10 min='0' size ="1" onchange = 'validateAnswer()' autocomplete="off">
             </p>
         </div>
+        <img class = "wrapper-item" src = "Resources/jim_hug.png" id = "jim-picture">
     </div>
 </body>
 </html>

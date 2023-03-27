@@ -10,8 +10,7 @@ function validareRaspuns(event)
         document.getElementById('stats-container').classList.add('verticalTranslate')
     } else {
         event.target.parentElement.classList.toggle('shake');
-        document.getElementById('equation-step1').style.visibility = 'visible';
-        localStorage.setItem('primaIncercare-bool', 0);
+        localStorage.setItem('primaIncercare-bool', false);
         localStorage.setItem('primaIncercare', 0);
     }
 }
@@ -134,4 +133,7 @@ function star(x, y, radius1, radius2, npoints) {
             fill(random(col));
             polygon(0,0,90,laturi[type]);
         }
+    localStorage.setItem('primaIncercare-bool', 1);
+    document.getElementById('stats-corecte-text').innerHTML = 'Corecte: ' + localStorage.getItem('corecte')
+    document.getElementById('stats-primaIncercare-text').innerHTML = 'Prima încercare: ' + localStorage.getItem('primaIncercare')
 }

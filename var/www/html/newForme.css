@@ -1,3 +1,7 @@
+@font-face{
+    font-family: avenir;
+    src: url("avenir_ff/AvenirLTStd-Black.otf");
+}
 body {
     background-color: rgb(50, 213, 131);
     font-family: Arial, Helvetica, sans-serif;
@@ -38,6 +42,7 @@ body {
 }
 
 #cerinta-container {
+    font-family: avenir;
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.8);
     border-radius: 10%;
@@ -58,7 +63,15 @@ body {
     outline: dashed;
 }
 
-input {
+#solution-input {
+    font-size: 30px;
+}
+
+#solution-inputX {
+    font-size: 30px;
+}
+
+#solution-inputY {
     font-size: 30px;
 }
 
@@ -113,6 +126,8 @@ input {
     border-radius: 5%;
     box-shadow: 5px 5px;
     font-size:20px;
+    font-family: avenir;
+
 }
 
 #stats-container.verticalTranslate {
